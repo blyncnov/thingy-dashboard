@@ -2,11 +2,6 @@
 
 import React, { useState } from "react";
 
-// dashboard layout components
-import MainContentSection from "@/components/main";
-import SidebarNaviagtion from "@/components/sidebar";
-import TopbarNavigation from "@/components/topbar";
-
 // React Icon
 import {
   AiFillApple,
