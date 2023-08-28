@@ -1,27 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+root {
+  --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --font-main: "Poppins", sans-serif;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  font-size: 14px;
+  font-style: normal;
+  min-height: 100vh;
+  scroll-timeline: inherit;
+  line-height: 1.5 !important;
+  background-color: #ffffff;
+  font-family: var(--font-main);
+  text-rendering: optimizeSpeed;
+  -o-font-smoothing: antialiased;
+  color: #0f0f17 !important;
+  -moz-font-smoothing: antialiased;
+  scroll-behavior: smooth !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+  background: linear-gradient(rgb(98, 98, 144), rgb(161, 115, 115));
+}
+
+div::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+
+#homepage_gradient {
+  width: 100%;
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    to bottom,
+    white,
+    rgba(229, 203, 203, 0.522),
+    white
+  );
 }
