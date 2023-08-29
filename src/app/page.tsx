@@ -70,7 +70,7 @@ export default function Home() {
   return (
     <main>
       <section
-        className={`bg-white w-full h-[100dvh] max-h-[100dvh] min-h-[100dvh] grid transition-all ${
+        className={`bg-white w-full h-screenh max-h-screenh min-h-screenh grid transition-all ${
           isWide ? "grid-cols-[240px_1fr]" : "grid-cols-[88px_1fr]"
         }`}
       >

@@ -12,6 +12,24 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      height: {
+        screenh: "100dvh",
+      },
+      width: {
+        screenh: "100dvw",
+      },
+      maxHeight: {
+        screenh: "100dvh",
+      },
+      maxWidth: {
+        screenh: "100dvw",
+      },
+      minHeight: {
+        screenh: "100dvh",
+      },
+      minWidth: {
+        screenh: "100dvw",
+      },
       gridTemplateColumns: {
         // Custom dashboard layout
         dashboard: "280px 1fr",
