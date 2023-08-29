@@ -9,13 +9,13 @@ import React, { useState } from "react";
 
 // React Icon
 import {
+  AiFillApple,
   AiFillForward,
   AiFillBackward,
   AiOutlineTeam,
   AiOutlineMessage,
   AiOutlineSetting,
 } from "react-icons/ai";
-import { CgOpenCollective } from "react-icons/cg";
 import { RiHomeLine } from "react-icons/ri";
 import { TbBrandBooking } from "react-icons/tb";
 import { MdPayment } from "react-icons/md";
@@ -82,10 +82,10 @@ export default function Home() {
                 }`}
               >
                 <h1 className="font-bold">
-                  <CgOpenCollective className="text-[2.5em] text-white cursor-pointer" />
+                  <AiFillApple className="text-[2.5em] text-white cursor-pointer" />
                 </h1>
                 {isWide ? (
-                  <h1 className="font-bold text-[1.5em] text-white">Voicze</h1>
+                  <h1 className="font-bold text-[1.5em] text-white">THINGY</h1>
                 ) : null}
               </div>
             </header>
