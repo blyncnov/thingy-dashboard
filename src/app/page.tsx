@@ -2,50 +2,56 @@
 
 import React, { useState } from "react";
 
+// dashboard layout components
+import MainContentSection from "@/components/main";
+import SidebarNaviagtion from "@/components/sidebar";
+import TopbarNavigation from "@/components/topbar";
+
 // React Icon
 import {
   AiFillApple,
   AiFillForward,
   AiFillBackward,
-  AiOutlineHome,
+  AiOutlineTeam,
   AiOutlineMessage,
   AiOutlineSetting,
 } from "react-icons/ai";
-import { BiUserVoice } from "react-icons/bi";
-import { TfiHelp } from "react-icons/tfi";
-import { MdOutlinePassword } from "react-icons/md";
+import { CgOpenCollective } from "react-icons/cg";
+import { RiHomeLine } from "react-icons/ri";
+import { TbBrandBooking } from "react-icons/tb";
+import { MdPayment } from "react-icons/md";
 import { IoLogOutOutline } from "react-icons/io5";
 
 const Navbardata = [
   {
     id: 1,
     title: "Dashboard",
-    icon: AiOutlineHome,
+    icon: RiHomeLine,
   },
   {
     id: 2,
-    title: "Customers",
-    icon: BiUserVoice,
+    title: "Teams",
+    icon: AiOutlineTeam,
   },
   {
     id: 3,
-    title: "Messages",
+    title: "Services",
     icon: AiOutlineMessage,
   },
   {
     id: 4,
-    title: "Help",
-    icon: TfiHelp,
+    title: "Bookings",
+    icon: TbBrandBooking,
   },
   {
     id: 5,
-    title: "Settings",
-    icon: AiOutlineSetting,
+    title: "Payments",
+    icon: MdPayment,
   },
   {
     id: 6,
-    title: "Password",
-    icon: MdOutlinePassword,
+    title: "Settings",
+    icon: AiOutlineSetting,
   },
   {
     id: 7,
@@ -64,28 +70,24 @@ export default function Home() {
   return (
     <main>
       <section
-        className={`bg-[#FAFAFA] w-full h-screen max-h-screen min-h-screen transition-all grid  p-2 ${
-          isWide ? "grid-cols-[250px_1fr]" : "grid-cols-[80px_1fr]"
+        className={`bg-white w-full h-[100dvh] max-h-[100dvh] min-h-[100dvh] grid transition-all ${
+          isWide ? "grid-cols-[240px_1fr]" : "grid-cols-[88px_1fr]"
         }`}
       >
         <div className="bg-halfdark rounded-xl shadow-sm border border-r-[#37313113]">
           <div>
             <header>
               <div
-                className={`w-full border-b border-[#37313113] p-4 text-center flex items-center gap-2 cursor-pointer ${
+                className={`w-full border-b border-[#c3b8b821] p-4 text-center flex items-end gap-1 cursor-pointer ${
                   isWide ? "justify-start" : "justify-center"
                 }`}
               >
                 <h1 className="font-bold">
-                  <AiFillApple className="text-[2.5em] text-white cursor-pointer" />
+                  <CgOpenCollective className="text-[2.5em] text-white cursor-pointer" />
                 </h1>
                 {isWide ? (
-                  <h1 className="font-bold text-[1.5em] text-white">
-                    Not-Apple
-                  </h1>
-                ) : (
-                  ""
-                )}
+                  <h1 className="font-bold text-[1.5em] text-white">Voicze</h1>
+                ) : null}
               </div>
             </header>
             <section className="p-4">
@@ -94,12 +96,13 @@ export default function Home() {
                   return (
                     <li
                       key={data.id}
-                      className={`flex items-center gap-2 cursor-pointer rounded py-3 px-2 bg-[] text-white hover:bg-white hover:text-halfdark ${
+                      className={`flex items-center gap-2 cursor-pointer rounded py-3 px-2 text-white
+                      hover:bg-white hover:text-halfdark ${
                         isWide ? "justify-start" : "justify-center"
                       }`}
                     >
                       <span>{<data.icon className="text-[1.5em]" />}</span>
-                      {isWide ? <span> {data.title}</span> : ""}
+                      {isWide ? <span> {data.title}</span> : null}
                     </li>
                   );
                 })}
@@ -107,7 +110,7 @@ export default function Home() {
             </section>
           </div>
         </div>
-        <div className="p-4">
+        <div className="p-4 bg-[#FAFAFA] rounded-xl">
           <button
             className="p-2 px-4 bg-halfdark primary rounded text-white"
             onClick={handleWideScreen}
