@@ -3,13 +3,12 @@
 import React, { useState } from "react";
 
 // dashboard layout components
-import MainContentSection from "@/components/main";
-import SidebarNaviagtion from "@/components/sidebar";
-import TopbarNavigation from "@/components/topbar";
+// import MainContentSection from "@/components/main";
+// import SidebarNaviagtion from "@/components/sidebar";
+// import TopbarNavigation from "@/components/topbar";
 
 // React Icon
 import {
-  AiFillApple,
   AiFillForward,
   AiFillBackward,
   AiOutlineTeam,
@@ -91,7 +90,7 @@ export default function Home() {
               </div>
             </header>
             <section className="p-4">
-              <ul className="flex flex-col gap-4">
+              <ul className="flex flex-col gap-2">
                 {Navbardata.map((data) => {
                   return (
                     <li
