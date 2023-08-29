@@ -74,7 +74,7 @@ export default function Home() {
           isWide ? "grid-cols-[240px_1fr]" : "grid-cols-[88px_1fr]"
         }`}
       >
-        <div className="bg-halfdark rounded-xl shadow-sm border border-r-[#37313113]">
+        <div className="bg-halfdark rounded-xl shadow-sm border border-white">
           <div>
             <header>
               <div
