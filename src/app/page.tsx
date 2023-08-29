@@ -90,7 +90,11 @@ export default function Home() {
               </div>
             </header>
             <section className="p-4">
-              <ul className="flex flex-col gap-4 md:gap-2">
+              <ul
+                className={`flex flex-col ${
+                  isWide ? "gap-2" : "gap-4 md:gap-2"
+                }`}
+              >
                 {Navbardata.map((data) => {
                   return (
                     <li
